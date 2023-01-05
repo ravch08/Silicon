@@ -1,0 +1,15 @@
+@use '../abstracts/helper'as *;
+
+.clients {
+
+   .heading {
+      width: 100%;
+      text-align: left;
+   }
+
+   .swiper-slide {
+      border-radius: 0.6rem;
+      padding: 2.5rem 1rem;
+      border: .1rem solid #0000002e;
+   }
+}

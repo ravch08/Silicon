@@ -1,0 +1,93 @@
+@use '../abstracts/helper'as *;
+
+.featuredProducts {
+
+   .center {
+      margin-top: 4rem;
+      @extend .flexRow-center;
+   }
+
+   .feature-content {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+   }
+
+   .feature-item {
+      line-height: 0;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      border-radius: 1.2rem;
+
+      img {
+         width: 100%;
+         height: auto;
+         transform: scale(1);
+         border-radius: 1.2rem;
+         transition: transform 0.5s ease-in-out;
+      }
+
+      &-content {
+         line-height: initial;
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: 0;
+         width: 100%;
+         height: 100%;
+         color: white;
+         padding: 2.5rem;
+         visibility: hidden;
+         @extend .flexColumn-alignStart;
+         background-color: hsla(0, 0%, 0%, 0.4);
+         transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+
+         h3 {
+            font-size: $fs-h3;
+            margin-bottom: 1.5rem;
+         }
+      }
+
+      &:hover {
+         img {
+            transform: scale(1.2);
+         }
+
+         .feature-item-content {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+
+   .feature-01 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
+
+   .feature-02 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+
+   .feature-03 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+
+   .feature-04 {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+}

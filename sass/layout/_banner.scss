@@ -1,0 +1,54 @@
+@use './../abstracts/helper'as *;
+
+.heroBanner {
+   width: 100%;
+   height: 100vh;
+   background-image: url('./../../assets/hero-bg.svg');
+   background-size: cover;
+   background-position: right;
+   background-repeat: no-repeat;
+
+   .banner-wrapper {
+      height: 100%;
+      @extend .flexRow-between;
+   }
+
+   .container {
+      height: 100%;
+   }
+}
+
+.banner-content {
+   width: 60%;
+
+   .digital-play {
+      display: flex;
+      align-items: center;
+
+      a {
+         width: 5rem;
+         height: 5rem;
+         border-radius: 50%;
+         background-color: white;
+         @extend .flexRow-center;
+      }
+
+      span {
+         font-size: 2rem;
+         font-weight: 600;
+         margin-left: 1.5rem;
+         color: $color-secondary;
+      }
+   }
+
+   h1 span {
+      background: $color-gradient-2;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   p {
+      margin: 2rem 0 4rem;
+   }
+}

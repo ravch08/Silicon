@@ -1,0 +1,72 @@
+@use './../abstracts/helper'as *;
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 99;
+   padding: 1.5rem 0;
+   background-color: transparent;
+   transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+   nav,
+   .nav-list,
+   .header-wrapper {
+      @extend .flexRow-between;
+   }
+
+   .nav-brand {
+      @extend .flexRow-between;
+
+      span {
+         font-weight: 900;
+         font-size: 2.2rem;
+         margin-left: 0.8rem;
+         color: $color-secondary;
+      }
+   }
+
+   &.sticky {
+      padding: 2rem 0;
+      background-color: white;
+      box-shadow: $box-shadow-md;
+   }
+}
+
+.nav-list {
+   margin-right: 2rem;
+
+   .nav-item {
+      display: flex;
+   }
+
+   .nav-link {
+      font-weight: 500;
+      position: relative;
+      font-size: $fs-body;
+      padding: 2.5rem 2rem;
+      color: $color-secondary;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+         color: darken($color-primary, 10%);
+
+         svg {
+            transform: rotate(180deg);
+            fill: darken($color-primary, 10%);
+         }
+      }
+   }
+
+   .dropdown-menu {
+      display: none;
+   }
+
+   svg {
+      position: absolute;
+      top: 43%;
+      right: 6%;
+      transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+   }
+}

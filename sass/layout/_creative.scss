@@ -1,0 +1,74 @@
+@use '../abstracts/helper'as *;
+
+.creative {
+   .heading {
+      width: 100%;
+      text-align: left;
+   }
+
+   svg {
+      fill: $color-primary;
+      transform: translate(10%, 65%);
+   }
+
+   img {
+      max-width: 100%;
+      border-radius: 1.2rem;
+      transition: filter 0.8s ease-in-out;
+
+      &:hover {
+         filter: grayscale(1);
+      }
+   }
+}
+
+.creative-awards {
+   margin-top: 6rem;
+   @extend .flexRow-between;
+
+   h2 {
+      font-size: 3.2rem;
+   }
+
+   .awards {
+      gap: 2rem;
+      @extend .flexRow-between;
+
+      img {
+         width: 10rem;
+      }
+   }
+}
+
+.contact {
+   padding: 0;
+   background-color: $color-tertiary;
+
+   .contact-box {
+      padding: 5rem;
+      height: 40rem;
+      color: white;
+      position: relative;
+      border-radius: 1.2rem;
+      @extend .flexColumn-center;
+      transform: translateY(12rem);
+      background: $color-gradient-1;
+
+      .contact-box-content {
+         z-index: 9;
+         position: relative;
+         @extend .flexColumn-center;
+      }
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+      }
+
+      h2 {
+         margin: 1.2rem 0 3rem;
+      }
+   }
+}

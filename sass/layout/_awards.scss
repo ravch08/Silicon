@@ -1,0 +1,32 @@
+@use '../abstracts/helper'as *;
+
+.awards {
+
+   &-wrapper {
+      gap: 2rem;
+      @extend .flexRow-between;
+   }
+
+   &-item {
+      padding: 0 2rem;
+      text-align: center;
+      border-right: 0.1rem solid hsl(0, 0%, 90%);
+
+      svg {
+         transform: translateY(0);
+         transition: transform 0.5s ease-in-out;
+      }
+
+      h3 {
+         margin: 2.5rem 1rem 1.5rem 1rem;
+      }
+
+      &:last-child {
+         border-right: none;
+      }
+
+      &:hover svg {
+         transform: translateY(-0.6rem);
+      }
+   }
+}

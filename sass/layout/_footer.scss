@@ -1,0 +1,101 @@
+@use '../abstracts/helper'as *;
+
+footer {
+   padding: 20rem 0 6rem;
+
+   .ftr-wrapper {
+      @extend .flexRow-start;
+   }
+
+   .contact-detail {
+      display: flex;
+   }
+
+   .ftr-contact {
+      font-weight: bold;
+      color: $color-secondary;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+         color: $color-primary;
+      }
+   }
+
+   .ftr-logo {
+      flex-basis: 40%;
+      margin-right: 5rem;
+
+      .ftr-logoImg {
+         display: flex;
+         align-items: center;
+      }
+
+      form {
+         margin-bottom: 2rem;
+      }
+
+      span {
+         font-weight: 600;
+         font-size: $fs-h4;
+         margin-left: 1rem;
+         color: $color-secondary;
+      }
+
+      p {
+         font-size: 1.3rem;
+         padding: 2rem 0;
+      }
+
+      input[type=text] {
+         border: none;
+         border-radius: 0.4rem;
+         padding: 1rem 1.8rem;
+         background-color: $color-light-400;
+      }
+   }
+
+   .ftr-list {
+      flex-basis: 20%;
+
+      li {
+         display: flex;
+      }
+
+      .ftr-link {
+         padding: 0.6rem 0;
+         color: $color-secondary;
+         transition: color .3s ease-in-out;
+
+         &:hover {
+            color: $color-primary;
+         }
+      }
+   }
+}
+
+.scrollTop {
+   bottom: 5%;
+   right: 5%;
+   z-index: 99;
+   width: 5rem;
+   height: 5rem;
+   cursor: pointer;
+   position: fixed;
+   transform: scale(1);
+   border-radius: 5rem;
+   @extend .flexRow-center;
+   background-color: $color-primary;
+   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+   svg {
+      fill: white;
+   }
+
+   &.scaleDown {
+      transform: scale(0);
+   }
+
+   &:hover {
+      background-color: darken($color-primary, 10%);
+   }
+}

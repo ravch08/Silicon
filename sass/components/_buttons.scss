@@ -1,0 +1,61 @@
+@use '../abstracts/helper'as *;
+
+.btn {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: $fs-btn;
+   display: inline-block;
+   border-radius: 0.8rem;
+   padding: 1.7rem 3.8rem 1.8rem;
+}
+
+.btn-primary {
+   color: white;
+   background-color: $color-primary;
+   transition: background-color 0.3s ease-in-out;
+
+   svg {
+      fill: white;
+      margin-right: 1rem;
+   }
+
+   &:hover {
+      background-color: darken($color-primary, 6%);
+   }
+}
+
+.btn-outline {
+   color: $color-primary;
+   background-color: transparent;
+   border: 0.1rem solid $color-primary;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+   &:hover {
+      color: white;
+      background-color: $color-primary;
+   }
+}
+
+.btn-white {
+   color: $color-primary;
+   background-color: white;
+   border: 0.1rem solid $color-primary;
+   transition: transform 0.3s ease-in-out;
+
+   &:hover {
+      transform: translateY(-0.6rem);
+   }
+}
+
+.btn-submit {
+   color: white;
+   cursor: pointer;
+   padding: 1.05rem 1.8rem;
+   transform: translateX(-0.4rem);
+   border-top-right-radius: 0.4rem;
+   background-color: $color-primary;
+   border-bottom-right-radius: 0.4rem;
+   border: 0.1rem solid $color-primary;
+}

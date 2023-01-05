@@ -1,0 +1,73 @@
+// CLASS DEFAULTS ----------------------------------------------------------------------------------
+
+@use "./variables"as v;
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  max-width: v.$width-container;
+}
+
+.heading {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-inline: auto;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+section {
+  padding: v.$section-padding 0;
+}
+
+.pr-05 {
+  padding-right: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.pl-05 {
+  padding-left: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: transform 0.6s ease-in, opacity 0.7s ease-in;
+
+  &.appear {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+// ----------------------------------- MEDIA QUERIES --------------------------------------
+
+
+@media screen and (max-width: 800px) {
+  section {
+    padding: 5rem 0;
+  }
+}
